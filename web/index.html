@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deploy Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Deploy Log</h1>
+      <p>What is running where, and what changed recently.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="tiles" id="tiles"></section>
+
+    <section>
+      <h2>Current versions</h2>
+      <div class="table-scroll">
+        <table id="matrix"></table>
+      </div>
+      <p id="matrix-empty" class="muted" hidden>No deployments recorded yet.</p>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Recent deployments</h2>
+        <div class="filters">
+          <select id="filter-service" aria-label="Filter by service"><option value="">All services</option></select>
+          <select id="filter-environment" aria-label="Filter by environment"><option value="">All environments</option></select>
+        </div>
+      </div>
+      <ul id="timeline" class="timeline"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
